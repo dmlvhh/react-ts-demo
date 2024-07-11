@@ -1,10 +1,12 @@
 import React from 'react'
-import StateDemo from './StateDemo'
+import StateDemo1 from './StateDemo1'
+import StateDemo2 from './StateDemo2'
 function App() {
   return (
     <>
       {/*<List1 />*/}
-      <StateDemo />
+      <StateDemo1 />
+      <StateDemo2 />
     </>
   )
 }

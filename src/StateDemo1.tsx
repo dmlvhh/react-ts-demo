@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react'
 
 const Demo: FC = () => {
   // let count = 0 // 普通的js无法触发组件的更新
-  const [count, setCount] = useState(0) //useState 可以出发组件的更新
-  const [name, setName] = useState('张三') //useState 可以出发组件的更新
+  const [count, setCount] = useState(0) // useState 可以出发组件的更新
+  const [name, setName] = useState('张三') // useState 可以出发组件的更新
   const add = () => {
     // count++
     // setCount(count + 1) // 合并后更新
