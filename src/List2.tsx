@@ -1,15 +1,26 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import './List1.css'
 import QuestionCard from './components/QuestionCard'
 import produce from 'immer'
 
 const List2: FC = () => {
+  // console.log('加载ajax请求')
+  useEffect(() => {
+    console.log('加载ajax请求')
+  }, [])
+  // const [count, setCount] = useState(0)
   const [questionList, setQuestionList] = useState([
     { id: 'q1', title: '问卷1', isPublished: false },
     { id: 'q2', title: '问卷2', isPublished: true },
     { id: 'q3', title: '问卷3', isPublished: false },
     { id: 'q4', title: '问卷4', isPublished: true },
   ])
+  useEffect(() => {
+    console.log('questionList changed')
+  }, [questionList])
+  // useEffect(() => {
+  //   console.log('count changed')
+  // }, [count, questionList])
   const add = () => {
     const r = Math.random().toString().slice(-3)
     // setQuestionList(

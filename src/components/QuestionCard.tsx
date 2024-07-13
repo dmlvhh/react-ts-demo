@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 import './QuestionCard.css'
 
 // ts 自定义类型
@@ -18,6 +18,12 @@ const QuestionCard: FC<PropsType> = props => {
   const del = (id: string) => {
     deleteQuestion(id)
   }
+  useEffect(() => {
+    console.log('questionCard mounted')
+    return () => {
+      console.log('questionCard unmounted', id) // 销毁
+    }
+  }, [])
   return (
     <div key={id} className="list-item">
       <strong>{title}</strong>
