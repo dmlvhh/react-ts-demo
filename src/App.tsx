@@ -3,7 +3,8 @@ import React from 'react'
 // import StateDemo2 from './StateDemo2'
 // import List2 from './List2'
 // import ImmerDemo from './ImmerDemo'
-import UseRefDemo from './useRefDemo'
+// import UseRefDemo from './useRefDemo'
+import UseMemoDemo from './UseMemoDemo'
 function App() {
   return (
     <>
@@ -12,7 +13,8 @@ function App() {
       {/*<StateDemo2 />*/}
       {/*<List2 />*/}
       {/*<ImmerDemo />*/}
-      <UseRefDemo />
+      {/*<UseRefDemo />*/}
+      <UseMemoDemo />
     </>
   )
 }
