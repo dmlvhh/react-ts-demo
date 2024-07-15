@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React, { FC, useEffect } from 'react'
 import './QuestionCard.css'
 
@@ -23,8 +24,16 @@ const QuestionCard: FC<PropsType> = props => {
   //     console.log('questionCard unmounted', id) // 销毁
   //   }
   // }, [])
+  // let itemClassName = 'list-item'
+  // if (isPublished) itemClassName += ' published'
+
+  // const itemClassName = classnames('list-item', { published: isPublished })
+  const itemClassName = classnames({
+    'list-item': true,
+    published: isPublished,
+  })
   return (
-    <div key={id} className="list-item">
+    <div key={id} className={itemClassName}>
       <strong>{title}</strong>
       &nbsp;
       {isPublished ? <span style={{ color: 'green' }}>已发布</span> : <span>未发布</span>}
