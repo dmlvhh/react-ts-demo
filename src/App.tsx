@@ -4,7 +4,8 @@ import React from 'react'
 // import List2 from './List2'
 // import ImmerDemo from './ImmerDemo'
 // import UseRefDemo from './useRefDemo'
-import UseMemoDemo from './UseMemoDemo'
+// import UseMemoDemo from './UseMemoDemo'
+import UseCallbackDemo from './UseCallbackDemo'
 function App() {
   return (
     <>
@@ -14,7 +15,8 @@ function App() {
       {/*<List2 />*/}
       {/*<ImmerDemo />*/}
       {/*<UseRefDemo />*/}
-      <UseMemoDemo />
+      {/*<UseMemoDemo />*/}
+      <UseCallbackDemo />
     </>
   )
 }
