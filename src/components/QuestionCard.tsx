@@ -9,7 +9,6 @@ type PropsType = {
   deleteQuestion: (id: string) => void
   publishQuestion: (id: string) => void
 }
-
 const QuestionCard: FC<PropsType> = props => {
   const { id, title, isPublished, deleteQuestion, publishQuestion } = props
   const publish = (id: string) => {
@@ -18,12 +17,12 @@ const QuestionCard: FC<PropsType> = props => {
   const del = (id: string) => {
     deleteQuestion(id)
   }
-  useEffect(() => {
-    console.log('questionCard mounted')
-    return () => {
-      console.log('questionCard unmounted', id) // 销毁
-    }
-  }, [])
+  // useEffect(() => {
+  //   console.log('questionCard mounted')
+  //   return () => {
+  //     console.log('questionCard unmounted', id) // 销毁
+  //   }
+  // }, [])
   return (
     <div key={id} className="list-item">
       <strong>{title}</strong>

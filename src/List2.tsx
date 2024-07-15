@@ -7,6 +7,9 @@ const List2: FC = () => {
   // console.log('加载ajax请求')
   useEffect(() => {
     console.log('加载ajax请求')
+    return () => {
+      console.log('销毁')
+    }
   }, [])
   // const [count, setCount] = useState(0)
   const [questionList, setQuestionList] = useState([
@@ -15,9 +18,9 @@ const List2: FC = () => {
     { id: 'q3', title: '问卷3', isPublished: false },
     { id: 'q4', title: '问卷4', isPublished: true },
   ])
-  useEffect(() => {
-    console.log('questionList changed')
-  }, [questionList])
+  // useEffect(() => {
+  //   console.log('questionList changed')
+  // }, [questionList])
   // useEffect(() => {
   //   console.log('count changed')
   // }, [count, questionList])
