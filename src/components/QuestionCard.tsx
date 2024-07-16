@@ -1,7 +1,7 @@
 import classnames from 'classnames'
 import React, { FC, useEffect } from 'react'
 // import './QuestionCard.css'
-import styles from './QuestionCard.module.css'
+import styles from './QuestionCard.module.scss'
 
 // ts 自定义类型
 type PropsType = {
@@ -29,16 +29,21 @@ const QuestionCard: FC<PropsType> = props => {
   // if (isPublished) itemClassName += ' published'
 
   // const itemClassName = classnames('list-item', { published: isPublished })
+  // const itemClassName = classnames({
+  //   'list-item': true,
+  //   published: isPublished,
+  // })
+  const listItemClass = styles['list-item']
+  const publishedClass = styles.published
   const itemClassName = classnames({
-    'list-item': true,
-    published: isPublished,
+    [listItemClass]: true,
+    [publishedClass]: isPublished,
   })
   return (
-    // <div key={id} className={itemClassName}>
-    <div key={id} className={styles['list-item']}>
+    <div key={id} className={itemClassName}>
       <strong>{title}</strong>
       &nbsp;
-      {isPublished ? <span style={{ color: 'green' }}>已发布</span> : <span>未发布</span>}
+      {isPublished ? <span className={styles['published-span']}>已发布</span> : <span>未发布</span>}
       &nbsp;
       <button
         onClick={() => {
