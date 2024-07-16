@@ -1,6 +1,7 @@
 import classnames from 'classnames'
 import React, { FC, useEffect } from 'react'
-import './QuestionCard.css'
+// import './QuestionCard.css'
+import styles from './QuestionCard.module.css'
 
 // ts 自定义类型
 type PropsType = {
@@ -33,7 +34,8 @@ const QuestionCard: FC<PropsType> = props => {
     published: isPublished,
   })
   return (
-    <div key={id} className={itemClassName}>
+    // <div key={id} className={itemClassName}>
+    <div key={id} className={styles['list-item']}>
       <strong>{title}</strong>
       &nbsp;
       {isPublished ? <span style={{ color: 'green' }}>已发布</span> : <span>未发布</span>}

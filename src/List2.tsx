@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from 'react'
-import './List1.css'
+// import './List1.css'
 import QuestionCard from './components/QuestionCard'
 import produce from 'immer'
-
+import styles from './List2.module.css'
 const List2: FC = () => {
   // console.log('加载ajax请求')
   useEffect(() => {
@@ -73,9 +73,11 @@ const List2: FC = () => {
       })
     )
   }
+
   return (
     <div>
       <h1>问卷列表2</h1>
+      <div className={styles['list-item']}>list-item</div>
       <div>
         {questionList.map(question => {
           const { id, title, isPublished } = question
